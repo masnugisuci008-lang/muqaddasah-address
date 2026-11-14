@@ -112,7 +112,7 @@
   #tip{position:absolute;pointer-events:none;opacity:0;transition:opacity .2s;background:rgba(4,20,16,.92);border:1px solid var(--gold);border-radius:10px;padding:8px 12px;font-size:.78rem;display:flex;flex-direction:column;gap:2px;max-width:200px;z-index:3}
   #tip b{font-weight:500;color:var(--gold-l)}
   #tip span{color:var(--muted);font-size:.72rem}
-  .maphint{position:absolute;left:50%;bottom:14px;transform:translateX(-50%);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);background:rgba(4,16,13,.6);padding:6px 14px;border-radius:99px;pointer-events:none;white-space:nowrap}
+  .maphint{position:absolute;left:50%;top:14px;transform:translateX(-50%);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);background:rgba(4,16,13,.6);padding:6px 14px;border-radius:99px;pointer-events:none;white-space:nowrap}
   .mapfallback{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:30px;color:var(--muted)}
   .infogrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:22px;margin-top:26px}
   .info{padding:26px 28px;border:1px solid var(--line);border-radius:18px;background:var(--card)}
@@ -491,7 +491,7 @@
                        mis. "https://formspree.io/f/xxxxxxx"
    ===================================================== */
 const CONFIG = {
-  HUB_URL: "https://masnugisuci008-lang.github.io/muqaddasah-hub/",
+  HUB_URL: "https://muqaddasahteknologiya.biz.id/",
   WAITLIST_ENDPOINT: ""
 };
 
@@ -1334,7 +1334,7 @@ function init3D(renderer){
     if (key === 'all') { const k = Math.max(1, 1.55 / camera.aspect); return { pos: mk(0, 48 * k, 95 * k), target: mk(0, 9, 0) }; }
     const kk = Math.max(1, 1.0 / camera.aspect);
     const L = LANDS[key];
-    return { pos: mk(L.x, 30 * kk, 46 * kk), target: mk(L.x, 7, 0) };
+    return { pos: mk(L.x, 30 * kk, 48 * kk), target: mk(L.x, 3, 0) };
   }
   let goal = null;
   function focus(key){
