@@ -1331,7 +1331,7 @@ function init3D(renderer){
   /* ---------- kamera ---------- */
   const mk = (x, y, z) => new THREE.Vector3(x, y, z);
   function view(key){
-    if (key === 'all') { const k = Math.max(1, 1.55 / camera.aspect); return { pos: mk(0, 46 * k, 96 * k), target: mk(0, 14, 0) }; }
+    if (key === 'all') { const k = Math.max(1, 1.55 / camera.aspect); return { pos: mk(0, 48 * k, 95 * k), target: mk(0, 9, 0) }; }
     const kk = Math.max(1, 1.0 / camera.aspect);
     const L = LANDS[key];
     return { pos: mk(L.x, 30 * kk, 46 * kk), target: mk(L.x, 7, 0) };
