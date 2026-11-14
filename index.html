@@ -458,6 +458,8 @@
     <p class="lead rv d2" data-en="Leave your details and we will tell you when addresses open." data-id="Tinggalkan data Anda dan kami akan mengabari saat alamat dibuka.">Leave your details and we will tell you when addresses open.</p>
 
     <form id="joinform" class="rv" novalidate>
+<input type="hidden" name="project" value="address">
+<input type="hidden" name="_subject" value="New signup: Project 1 (Official Address)">
       <label><span data-en="Name" data-id="Nama">Name</span><input name="name" type="text" autocomplete="name" required></label>
       <label><span data-en="Email" data-id="Email">Email</span><input name="email" type="email" autocomplete="email" required></label>
       <label class="full"><span data-en="Company (optional)" data-id="Perusahaan (opsional)">Company (optional)</span><input name="company" type="text" autocomplete="organization"></label>
@@ -466,7 +468,8 @@
       <label><span data-en="Preferred tier" data-id="Tier pilihan">Preferred tier</span>
         <select name="tier"><option value="1">Tier 1</option><option value="2">Tier 2</option><option value="3">Tier 3</option></select></label>
       <button class="cta" type="submit"><span data-en="Notify me" data-id="Kabari saya">Notify me</span></button>
-      <p id="joinstatus" role="status" aria-live="polite"></p>
+      <p class="fine" style="grid-column:1/-1;text-align:center" data-en="We only use your email to update you about this project." data-id="Kami hanya memakai email Anda untuk mengabari soal project ini.">We only use your email to update you about this project.</p>
+<p id="joinstatus" role="status" aria-live="polite"></p>
     </form>
   </div>
 </section>
@@ -492,7 +495,7 @@
    ===================================================== */
 const CONFIG = {
   HUB_URL: "https://muqaddasahteknologiya.biz.id/",
-  WAITLIST_ENDPOINT: ""
+  WAITLIST_ENDPOINT: "https://formspree.io/f/mnpdjwdr"
 };
 
 const T = o => o[document.documentElement.lang === 'id' ? 'id' : 'en'];
