@@ -1277,10 +1277,10 @@ function init3D(renderer){
     add(0, 0, 2.8, L.lmH, 2.8, 1, L.landmark, false).rotation.y = 0;
     crown(0, 0, L.lmH, 2.8, 2.8, true);
     const beam = new THREE.Mesh(
-      new THREE.CylinderGeometry(0.9, 1.8, 36, 24, 1, true),
+      new THREE.CylinderGeometry(0.9, 1.8, 14, 24, 1, true),
       new THREE.MeshBasicMaterial({ color: L.col, transparent: true, opacity: 0.14, blending: THREE.AdditiveBlending, side: THREE.DoubleSide, depthWrite: false })
     );
-    beam.position.set(0, 0.6 + L.lmH + 18, 0); g.add(beam); beams.push(beam); crowns.push(beam);
+    beam.position.set(0, 0.6 + L.lmH + 7, 0); g.add(beam); beams.push(beam); crowns.push(beam);
     const lmLabel = makeLabel(() => L.landmark.toUpperCase(), L.lmSub, L.hex, 15);
     lmLabel.position.set(0, 0.6 + L.lmH + 6, 0); g.add(lmLabel); crowns.push(lmLabel);
 
@@ -1331,7 +1331,7 @@ function init3D(renderer){
   /* ---------- kamera ---------- */
   const mk = (x, y, z) => new THREE.Vector3(x, y, z);
   function view(key){
-    if (key === 'all') { const k = Math.max(1, 1.55 / camera.aspect); return { pos: mk(0, 48 * k, 94 * k), target: mk(0, 6, 0) }; }
+    if (key === 'all') { const k = Math.max(1, 1.55 / camera.aspect); return { pos: mk(0, 46 * k, 96 * k), target: mk(0, 14, 0) }; }
     const kk = Math.max(1, 1.0 / camera.aspect);
     const L = LANDS[key];
     return { pos: mk(L.x, 30 * kk, 46 * kk), target: mk(L.x, 7, 0) };
